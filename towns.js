@@ -34,6 +34,14 @@ function showMessage(msg) {
     }, 3000);
 }
 
+function addTown() {
+	let townName = $('#townNameForAdd').val();
+	$('#townNameForAdd').val('');
+	$('#towns').append($('<option>').text(townName));
+	$('#result').text(townName + " added.");
+}
+
+
 function shuffleTowns() {
     let towns = $('#towns option').toArray();
     $('#towns').empty();
